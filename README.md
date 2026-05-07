@@ -1,12 +1,11 @@
 [![Wazuh](https://img.shields.io/badge/Wazuh-v4.14.x-blue)](https://wazuh.com/)
 [![YARA](https://img.shields.io/badge/YARA-v4.5.5-red)](https://virustotal.github.io/yara/)
 
-# WAZUH - COMPLETE CONFIGURATION GUIDE
-## Quick Reference Guide | DETECT - Cybersecurity Training
+# Wazuh - Complete Configuration Guide
 
 ---
 
-## 📋 TABLE OF CONTENTS
+## Table of Contents
 
 1. [Environment Architecture](#environment-architecture)
 2. [Wazuh Installation](#wazuh-installation)
@@ -22,7 +21,7 @@
 
 ---
 
-## 🏗️ ENVIRONMENT ARCHITECTURE
+## Environment Architecture
 
 ### Components
 
@@ -43,7 +42,7 @@
 
 ---
 
-## 🔧 WAZUH INSTALLATION
+## Wazuh Installation
 
 ### Server (Ubuntu 22.04)
 
@@ -88,7 +87,7 @@ sudo systemctl start wazuh-agent
 
 ---
 
-## ⚙️ BASIC CONFIGURATION
+## Basic Configuration
 
 ### Configuration Files
 
@@ -121,7 +120,7 @@ net start WazuhSvc
 
 ---
 
-## 📁 FILE INTEGRITY MONITORING (FIM)
+## File Integrity Monitoring (FIM)
 
 ### Concept
 
@@ -206,9 +205,9 @@ sudo tail -f /var/ossec/logs/alerts/alerts.log | grep -i syscheck
 
 ---
 
-## 🦠 YARA INTEGRATION - MALWARE DETECTION
+## Yara Integration - Malware Detection
 
-### 📌 Overview
+### Overview
 
 **YARA** = Yet Another Ridiculous Acronym (or Yet Another Recursive Acronym)
 
@@ -229,7 +228,7 @@ Pattern recognition engine for malware identification through rules describing m
 
 ---
 
-## 🐧 YARA CONFIGURATION - LINUX AGENT
+## Yara Configuration - Linux Agent
 
 ### 1. Install YARA on Agent
 
@@ -338,7 +337,7 @@ sudo systemctl restart wazuh-agent
 
 ---
 
-## 🖥️ YARA CONFIGURATION - WAZUH SERVER
+## Yara Configuration - Wazuh Server
 
 ### 1. Custom Rules
 
@@ -451,7 +450,7 @@ sudo systemctl status wazuh-manager
 
 ---
 
-## 🧪 YARA TESTING - MALWARE SAMPLES
+## Yara Testing - Malware Samples
 
 ### Malware Download Script
 
@@ -517,7 +516,7 @@ sudo tail -f /var/ossec/logs/alerts/alerts.log | grep -A 10 "108001"
 
 ---
 
-## 🪟 YARA CONFIGURATION - WINDOWS AGENT
+## Yara Configuration - Windows Agent
 
 ### 1. Install YARA
 
@@ -627,7 +626,7 @@ exit /b 0
 
 ---
 
-## 🚫 MALICIOUS IP BLOCKING (CDB LISTS)
+## Malicious Ip Blocking (CDB Lists)
 
 ### Concept
 
@@ -763,7 +762,7 @@ netsh advfirewall firewall show rule name=all | findstr "Wazuh"
 
 ---
 
-## 🔨 BRUTE FORCE DETECTION
+## Brute Force Detection
 
 ### Monitored Logs
 
@@ -815,7 +814,7 @@ sudo tail -200 /var/ossec/logs/alerts/alerts.log | grep -E "5551|5712|5716|5720|
 
 ---
 
-## 💉 SQL INJECTION DETECTION
+## Sql Injection Detection
 
 ### Configure Apache Logs (Agent)
 
@@ -857,7 +856,7 @@ sudo tail -200 /var/ossec/logs/alerts/alerts.log | grep -i "31106"
 
 ---
 
-## ⚡ ACTIVE RESPONSE
+## Active Response
 
 ### Concept
 
@@ -927,7 +926,7 @@ Automatic response mechanism to specific alerts.
 
 ---
 
-## 🔍 TROUBLESHOOTING
+## Troubleshooting
 
 ### Problem: YARA not detecting malware
 
@@ -998,7 +997,7 @@ sudo tail -100 /var/ossec/logs/ossec.log
 
 ---
 
-## 🛠️ USEFUL COMMANDS
+## Useful Commands
 
 ### Service Management
 
@@ -1081,7 +1080,7 @@ sudo tar -czf ~/wazuh-config-backup-$(date +%Y%m%d).tar.gz \
 
 ---
 
-## 📚 REFERENCES
+## References
 
 ### Official Documentation
 
